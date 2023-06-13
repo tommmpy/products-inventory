@@ -1,0 +1,17 @@
+<%= form_for @product, html: { class: "product-form" } do |f| %>
+  <div class="field">
+    <%= f.label :name, class: "form-label" %><br>
+    <%= f.text_field :name, class: "form-input", required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :description, class: "form-label" %><br>
+    <%= f.text_area :description, class: "form-input autosize", required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :price, class: "form-label" %><br>
+    <%= f.number_field :price, class: "form-input", required: true %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar", class: "btn-submit" %>
+  </div>
+<% end %>

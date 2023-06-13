@@ -1,0 +1,12 @@
+<h1 class="page-title">Lista de productos</h1>
+
+<div class="products-container">
+  <% @products.each do |product| %>
+    <div class="product-card">
+      <h2 class="product-name"><%= product.name %></h2>
+      <%= link_to "Mostrar", product_path(product), class: "btn-show" %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "Nuevo producto", new_product_path, class: "btn-new" %>
